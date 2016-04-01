@@ -1,35 +1,35 @@
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <li id="tripTab1" role="presentation" class="active">
+  <li id="tripTab1" role="presentation" class="active" {{action "tryStep" "1"}}>
     <i>
       <img src="images/features/features-ic-1.png" alt="Features" />
       <img src="images/features/features-ic-11.png" alt="Features" />
     </i>
     Big Picture
   </li>
-  <li id="tripTab2" role="presentation">
+  <li id="tripTab2" role="presentation" {{action "tryStep" "2"}}>
     <i>
       <img src="images/features/features-ic-2.png" alt="Features" />
       <img src="images/features/features-ic-22.png" alt="Features" />
     </i>
     Emergency Info
   </li>
-  <li id="tripTab3" role="presentation">
+  <li id="tripTab3" role="presentation" {{action "tryStep" "3"}}>
     <i>
       <img src="images/features/features-ic-3.png" alt="Features" />
       <img src="images/features/features-ic-33.png" alt="Features" />
     </i>
     Intinerary
   </li>
-  <li id="tripTab4" role="presentation">
+  <li id="tripTab4" role="presentation" {{action "tryStep" "4"}}>
     <i>
       <img src="images/features/features-ic-4.png" alt="Features" />
       <img src="images/features/features-ic-44.png" alt="Features" />
     </i>
     Extra info
   </li>
-  <li id="tripTab5" role="presentation">
+  <li id="tripTab5" role="presentation" {{action "tryStep" "5"}}>
       <i>
         <img src="images/features/features-ic-5.png" alt="Features" />
         <img src="images/features/features-ic-55.png" alt="Features" />
@@ -98,7 +98,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "nextStep" "2"}} value="Next >>" class="btn-primary"/>
+            <input {{action "showStep" "2"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
         </form>
       </div>
@@ -151,7 +151,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "nextStep" "3"}} type="submit" value="Next >>" class="btn-primary"/>
+            <input {{action "showStep" "3"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
         </form>
       </div>
@@ -327,7 +327,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "nextStep" "4"}} type="submit" value="Next >>" class="btn-primary"/>
+            <input {{action "showStep" "4"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
         </form>
       </div>
@@ -404,7 +404,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "nextStep" "5"}} type="submit" value="Finish >>" class="btn-primary"/>
+            <input {{action "showStep" "5"}} type="submit" value="Finish >>" class="btn-primary"/>
           </div>
         </form>
       </div>

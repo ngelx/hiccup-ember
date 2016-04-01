@@ -3,19 +3,27 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   actions: {
-    next_to_emergency_info() {
+    tryStep(tab){
       var that = this;
-      that.$('#tripTab2').toggleClass("active").siblings().removeClass("active");
-      that.$('#tripTabContent2').toggleClass("active").siblings().removeClass("active");
-      // TODO
-      //model.set('tripEditorLastStep', 2);
+      var s = parseInt(tab);
+      if (s <= that.trip.get('tripEditorLastStep')) {
+        console.log("Trying to navigate using ShowStep to tab ", tab);
+        that.send('showStep', tab);
+      }
+      else {
+        // TODO Do something more interesting.
+        console.log("nop, you cannot navigate to this step yet");
+      }
     },
-    nextStep(nextTab){
+    showStep(tab){
       var that = this;
-      that.$('#tripTab' + nextTab ).toggleClass("active").siblings().removeClass("active");
-      that.$('#tripTabContent' + nextTab).toggleClass("active").siblings().removeClass("active");
+      var step = parseInt(tab);
+      that.$('#tripTab' + tab ).toggleClass("active").siblings().removeClass("active");
+      that.$('#tripTabContent' + tab).toggleClass("active").siblings().removeClass("active");
       // TODO
-      //model.set('tripEditorLastStep', 2);
+      if (step > that.trip.get('tripEditorLastStep')) {
+        that.trip.set('tripEditorLastStep', step);
+      }
     }
   }
 });
