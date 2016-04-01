@@ -535,11 +535,11 @@
 	padding-right: 30px;
 }
 .features-section .nav-tabs,
-.features-section .nav-tabs > li.active > a,
-.features-section .nav-tabs > li.active > a:focus,
-.features-section .nav-tabs > li.active > a:hover,
-.features-section .nav-tabs > li > a:hover,
-.features-section .nav-tabs > li > a:focus {
+.features-section .nav-tabs > li.active > i,
+.features-section .nav-tabs > li.active > i:focus,
+.features-section .nav-tabs > li.active > i:hover,
+.features-section .nav-tabs > li > i:hover,
+.features-section .nav-tabs > li > i:focus {
 	border: none;
 }
 .features-section .nav-tabs li {
@@ -563,7 +563,7 @@
 	bottom: -1px;
 	right: 0;
 }
-.features-section .nav-tabs li a i {
+.features-section .nav-tabs li i {
 	display: block;
 	width: 103px;
 	height: 103px;
@@ -581,17 +581,17 @@
 	-o-transition: all 0.3s ease 0s;
 	transition: all 0.3s ease 0s;
 }
-.features-section .nav-tabs li a i img:last-child,
-.features-section .nav-tabs > li.active > a i img:first-child,
-.features-section .nav-tabs > li.active > a:focus i img:first-child,
-.features-section .nav-tabs > li.active > a:hover i img:first-child,
-.features-section .nav-tabs li a:hover i img:first-child {
+.features-section .nav-tabs li i img:last-child,
+.features-section .nav-tabs > li.active > i img:first-child,
+.features-section .nav-tabs > li.active > i:focus img:first-child,
+.features-section .nav-tabs > li.active > i:hover img:first-child,
+.features-section .nav-tabs li i:hover img:first-child {
 	display: none;
 }
-.features-section .nav-tabs > li.active > a i img:last-child,
-.features-section .nav-tabs > li.active > a:focus i img:last-child,
-.features-section .nav-tabs > li.active > a:hover i img:last-child,
-.features-section .nav-tabs li a:hover i img:last-child {
+.features-section .nav-tabs > li.active > i img:last-child,
+.features-section .nav-tabs > li.active > i:focus img:last-child,
+.features-section .nav-tabs > li.active > i:hover img:last-child,
+.features-section .nav-tabs li i:hover img:last-child {
 	display: inline-block;
 }
 .features-section .nav-tabs li a {
@@ -600,22 +600,22 @@
 	color: rgba(0,0,0,0.7);
 	margin: 0;
 }
-.features-section .nav-tabs > li > a:hover,
-.features-section .nav-tabs > li > a:focus {
+.features-section .nav-tabs > li > i:hover,
+.features-section .nav-tabs > li > i:focus {
 	background-color: transparent;
 }
-.features-section .nav-tabs > li > a:hover,
-.features-section .nav-tabs > li > a:focus,
-.features-section .nav-tabs > li.active > a,
-.features-section .nav-tabs > li.active > a:focus,
-.features-section .nav-tabs > li.active > a:hover {
+.features-section .nav-tabs > li > i:hover,
+.features-section .nav-tabs > li > i:focus,
+.features-section .nav-tabs > li.active > i,
+.features-section .nav-tabs > li.active > i:focus,
+.features-section .nav-tabs > li.active > i:hover {
 	color: #7f4808;
 }
-.features-section .nav-tabs > li > a:hover i,
-.features-section .nav-tabs > li > a:focus i,
-.features-section .nav-tabs > li.active > a i,
-.features-section .nav-tabs > li.active > a:focus i,
-.features-section .nav-tabs > li.active > a:hover i {
+.features-section .nav-tabs > li > i:hover,
+.features-section .nav-tabs > li > i:focus,
+.features-section .nav-tabs > li.active > i,
+.features-section .nav-tabs > li.active > i:focus,
+.features-section .nav-tabs > li.active > i:hover {
 	background-color: #7f4808;
 	width: 111px;
 	height: 111px;
@@ -623,11 +623,11 @@
 	margin-top: 0;
 	margin-bottom: 33px;
 }
-.features-section .nav-tabs > li.active > a i::after,
-.features-section .nav-tabs > li.active > a:focus i::after,
-.features-section .nav-tabs > li.active > a:hover i::after,
-.features-section .nav-tabs > li > a:hover i::after,
-.features-section .nav-tabs > li > a:focus i::after {
+.features-section .nav-tabs > li.active > i::after,
+.features-section .nav-tabs > li.active > i:focus::after,
+.features-section .nav-tabs > li.active > i:hover::after,
+.features-section .nav-tabs > li > i:hover::after,
+.features-section .nav-tabs > li > i:focus::after {
 	content: "";
 	background-image: url("../images/features/active-shadow.png");
 	background-repeat: no-repeat;

@@ -21,15 +21,16 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
   app.import('vendor/fonts/elegant-icons.css');
-  app.import('vendor/bxslider/jquery.bxslider.js');
-  app.import('vendor/bxslider/jquery.bxslider.css');
+  //app.import('vendor/bxslider/jquery.bxslider.js');
+  //app.import('vendor/bxslider/jquery.bxslider.css');
 
   app.import('vendor/appear/jquery.appear.js');
   app.import('vendor/number/jquery.animateNumber.min.js');
   app.import('vendor/isotope/isotope.pkgd.min.js');
   app.import('vendor/magnific-popup/jquery.magnific-popup.min.js');
   app.import('vendor/magnific-popup/magnific-popup.css');
-  app.import('vendor/functions.js');
+
+  //app.import('vendor/functions.js');
 
 
   app.import('vendor/loader/loaders.min.css');
