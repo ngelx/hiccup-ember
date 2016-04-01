@@ -20,5 +20,28 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import('vendor/fonts/elegant-icons.css');
+  app.import('vendor/bxslider/jquery.bxslider.js');
+  app.import('vendor/bxslider/jquery.bxslider.css');
+
+  app.import('vendor/appear/jquery.appear.js');
+  app.import('vendor/number/jquery.animateNumber.min.js');
+  app.import('vendor/isotope/isotope.pkgd.min.js');
+  app.import('vendor/magnific-popup/jquery.magnific-popup.min.js');
+  app.import('vendor/magnific-popup/magnific-popup.css');
+  app.import('vendor/functions.js');
+
+
+  app.import('vendor/loader/loaders.min.css');
+  app.import('vendor/animate/animate.min.css');
+
+  app.import('vendor/plugins.css');
+  app.import('vendor/navigation-menu.css');
+  app.import('vendor/style.css');
+  app.import('vendor/shortcodes.css');
+
+
+
+
   return app.toTree();
 };
