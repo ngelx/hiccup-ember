@@ -53,7 +53,6 @@
           <div class="col-md-7">
             <div class="input-group">
               {{input value=trip.name class="form-control" placeholder="Trip Name" required="true"}}
-              <!--<input type="text" class="> -->
             </div>
           </div>
           <div class="col-md-5">
@@ -61,9 +60,14 @@
               {{input value=trip.organizer class="form-control" placeholder="Your Name"}}
             </div>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="input-group">
-              {{textarea value=trip.goals cols="80" rows="3" class="form-control" placeholder="Trip Goals"}}
+              {{bs-datetimepicker date=trip.startDate format='YYYY-MM-DD' placeholder="Departure Date/Time" updateDate=(action (mut trip.startDate)) noIcon=true required="true"}}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              {{bs-datetimepicker date=trip.endtDate format='YYYY-MM-DD' placeholder="Return Date/Time" updateDate=(action (mut trip.endDate)) noIcon=true required="true"}}
             </div>
           </div>
           <div class="col-md-6">
@@ -76,16 +80,12 @@
               {{input value=trip.endLocation class="form-control" placeholder="End location"}}
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
             <div class="input-group">
-              {{bs-datetimepicker date=trip.startDate format='YYYY-MM-DD' placeholder="Departure Date/Time" updateDate=(action (mut trip.startDate)) noIcon=true}}
+              {{textarea value=trip.goals cols="80" rows="3" class="form-control" placeholder="Trip Goals"}}
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              {{bs-datetimepicker date=trip.endtDate format='YYYY-MM-DD' placeholder="Return Date/Time" updateDate=(action (mut trip.endDate)) noIcon=true}}
-            </div>
-          </div>
+
           <div class="col-md-6">
             <div class="input-group">
               {{input value=trip.planedRoute class="form-control" placeholder="Planed Route"}}
@@ -96,7 +96,6 @@
               {{input value=trip.transportation class="form-control" placeholder="Transportation"}}
             </div>
           </div>
-
           <div class="col-md-12 text-right">
             <input {{action "showStep" "2"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
@@ -115,37 +114,37 @@
       <div class="checkout-content">
           <div class="col-md-7">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Comunication">
+              {{input value=trip.comunication class="form-control" placeholder="Comunication"}}
             </div>
           </div>
           <div class="col-md-5">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Freak out time">
+              {{input value=trip.freakOut class="form-control" placeholder="Freak out time"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="In Reach Map">
+              {{input value=trip.inReachMap class="form-control" placeholder="In Reach Map"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Local contact Name">
+              {{input value=trip.localContactName class="form-control" placeholder="Local contact Name"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Local contact email">
+              {{input value=trip.localContactEmail class="form-control" placeholder="Local contact Email"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Local contact phone">
+              {{input value=trip.localContactPhone class="form-control" placeholder="Local contact Phone"}}
             </div>
           </div>
           <div class="col-md-12">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Managing Agency">
+              {{input value=trip.agency class="form-control" placeholder="Managing Agency"}}
             </div>
           </div>
 
@@ -344,57 +343,57 @@
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Stove fuel">
+              {{input value=trip.stoveFuel class="form-control" placeholder="Stove fuel"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Trasportation Time to trailhead"></textarea>
+              {{input value=trip.timeToTrailhead class="form-control" placeholder="Trasportation Time to trailhead"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Direction Out"></textarea>
+              {{textarea value=trip.directionOut cols="40" rows="2" class="form-control" placeholder="Direction Out"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Condition Cautions"></textarea>
+              {{textarea value=trip.conditionCaution cols="40" rows="2" class="form-control" placeholder="Condition Cautions"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Animal Cautions"></textarea>
+              {{textarea value=trip.animalCaution cols="40" rows="2" class="form-control" placeholder="Animal Cautions"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Plant Cautions"></textarea>
+              {{textarea value=trip.plantCaution cols="40" rows="2" class="form-control" placeholder="Plant Cautions"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Mosquito/fly issues"></textarea>
+              {{textarea value=trip.flyIssue cols="40" rows="2" class="form-control" placeholder="Mosquito/fly issues"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Supermarket">
+              {{input value=trip.supermarket class="form-control" placeholder="Supermarket"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Outdoors Store">
+              {{input value=trip.outdoorsStore class="form-control" placeholder="Outdoors Store"}}
             </div>
           </div>
           <div class="col-md-12">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="plannign resources">
+              {{input value=trip.resources class="form-control" placeholder="plannign resources"}}
             </div>
           </div>
           <div class="col-md-12">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Attach hinking guide">
+              {{input value=trip.guides class="form-control" placeholder="Attach hinking guide"}}
             </div>
           </div>
 
