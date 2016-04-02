@@ -2,17 +2,29 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  currentStep: 1,
+
   actions: {
     tryStep(tab){
       var that = this;
       var s = parseInt(tab);
       if (s <= that.trip.get('tripEditorLastStep')) {
-        console.log("Trying to navigate using ShowStep to tab ", tab);
+        that.currentStep = tab;
         that.send('showStep', tab);
       }
       else {
         // TODO Do something more interesting.
         console.log("nop, you cannot navigate to this step yet");
+      }
+    },
+    nextStep(){
+      var that = this;
+      if (that.currentStep < 5 ){
+        that.currentStep++;
+        that.send('showStep', that.currentStep);
+      }
+      else {
+        console.log("NOP! is:", that.currentStep);
       }
     },
     showStep(tab){

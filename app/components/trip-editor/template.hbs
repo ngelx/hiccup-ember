@@ -38,7 +38,7 @@
   </li>
 </ul>
 <!-- Tab panes -->
-  <form>
+<form {{action "nextStep" on="submit"}}>
 <div class="tab-content container-fluid no-padding">
 
   <div id="tripTabContent1" role="tabpanel" class="tab-pane active">
@@ -97,7 +97,7 @@
             </div>
           </div>
           <div class="col-md-12 text-right">
-            <input {{action "showStep" "2"}} type="submit" value="Next >>" class="btn-primary"/>
+            <input type="submit" value="Next >>" class="btn-primary"/>
           </div>
       </div>
     </div>
@@ -149,7 +149,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "showStep" "3"}} type="submit" value="Next >>" class="btn-primary"/>
+            <input type="submit" value="Next >>" class="btn-primary"/>
           </div>
       </div>
     </div>
@@ -323,7 +323,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "showStep" "4"}} type="submit" value="Next >>" class="btn-primary"/>
+            <input type="submit" value="Next >>" class="btn-primary"/>
           </div>
       </div>
     </div>
@@ -398,7 +398,7 @@
           </div>
 
           <div class="col-md-12 text-right">
-            <input {{action "showStep" "5"}} type="submit" value="Finish >>" class="btn-primary"/>
+            <input type="submit" value="Finish >>" class="btn-primary"/>
           </div>
       </div>
     </div>
