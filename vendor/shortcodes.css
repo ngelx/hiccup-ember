@@ -3028,42 +3028,42 @@
 	margin: 0;
 	border-bottom: 1px solid #d9d9d9;
 }
-.checkout-content > form {
+form .checkout-content {
 	display: inline-block;
     padding: 34px 17px;
     width: 100%;
 }
-.checkout-content > form > [class*="col-md-"] {
+form .checkout-content > [class*="col-md-"] {
 	padding-left: 8px;
 	padding-right: 8px;
 }
-.checkout-content > form .input-group {
+form .checkout-content .input-group {
 	margin-bottom: 29px;
 	width: 100%;
 }
-.checkout-content > form label {
+form .checkout-content label {
 	font-weight: 600;
 	font-size: 15px;
 	width: 100%;
 	display: inline-block;
 	margin-bottom: 17px;
-}.checkout-content > form select {
+}form .checkout-content select {
 	width: 100%;
 }
-.checkout-content > form select,
-.checkout-content > form input {
+form .checkout-content select,
+form .checkout-content input {
 	border: 1px solid #d9d9d9;
 	padding: 8px 18px;
 }
-.checkout-content > form input,
-.checkout-content > form input:focus {
+form .checkout-content input,
+form .checkout-content input:focus {
 	box-shadow: none;
 	border-radius: 0;
 	outline: none;
 	height: auto;
 	border-color: #d9d9d9;
 }
-.checkout-content > form .input-group-addon {
+form .checkout-content .input-group-addon {
 	background-color: transparent;
 	border: none;
 	text-align: left;
@@ -3074,10 +3074,10 @@
 	display: inline-block;
 	margin-bottom: 15px;
 }
-.checkout-content > form .input-group-addon:last-child {
+form .checkout-content .input-group-addon:last-child {
 	margin-bottom: 0;
 }
-.checkout-content > form .input-group-addon span {
+form .checkout-content .input-group-addon span {
 	font-size: 14px;
 	text-transform: none;
 	margin-top: 17px;
@@ -3086,12 +3086,12 @@
 	margin-bottom: 0;
 	display: block;
 }
-.checkout-content > form .input-group-addon input {
+form .checkout-content .input-group-addon input {
 	float: left;
 	width: auto;
 	margin-right: 12px;
 }
-.checkout-content > form .input-group-addon:last-child input {
+form .checkout-content .input-group-addon:last-child input {
 	margin-top: 6px;
 }
 .checkout-content input[type="submit"] {

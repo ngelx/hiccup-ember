@@ -25,5 +25,15 @@ export default Ember.Component.extend({
         that.trip.set('tripEditorLastStep', step);
       }
     }
+  },
+
+  didRender() {
+    this.$("#input-image-1").fileinput({
+      maxFileCount: 1,
+      autoReplace: true,
+      initialPreview: [
+        '<img src="images/features/mac-pc.png" alt="Mac" />'
+      ]
+    });
   }
 });

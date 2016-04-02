@@ -38,71 +38,71 @@
   </li>
 </ul>
 <!-- Tab panes -->
+  <form>
 <div class="tab-content container-fluid no-padding">
+
   <div id="tripTabContent1" role="tabpanel" class="tab-pane active">
+
     <div class="col-md-4 col-sm-5">
       <div class="trip-picture">
-        <img src="images/features/mac-pc.png" alt="Mac" />
-        <p class="text-white">
-          (Click to Change picture)
-        </p>
+        <input id="input-image-1" value="{{trip.image}}" name="{{trip.image}}" type="file" class="file-loading" accept="image/*">
       </div>
     </div>
     <div class="col-md-8 col-sm-7 feature-content">
       <div class="checkout-content">
-        <form>
           <div class="col-md-7">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Trip Name">
+              {{input value=trip.name class="form-control" placeholder="Trip Name" required="true"}}
+              <!--<input type="text" class="> -->
             </div>
           </div>
           <div class="col-md-5">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              {{input value=trip.organizer class="form-control" placeholder="Your Name"}}
             </div>
           </div>
           <div class="col-md-12">
             <div class="input-group">
-              <textarea type="text" class="form-control" placeholder="Trip Goals"></textarea>
+              {{textarea value=trip.goals cols="80" rows="3" class="form-control" placeholder="Trip Goals"}}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!--<div class="input-group"> -->
+              {{input value=trip.startLocation class="form-control" placeholder="Start Location"}}
+            <!--</div>-->
+          </div>
+          <div class="col-md-6">
+            <div class="input-group">
+              {{input value=trip.endLocation class="form-control" placeholder="End location"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Start Location">
+              {{bs-datetimepicker date=trip.startDate format='YYYY-MM-DD' placeholder="Departure Date/Time" updateDate=(action (mut trip.startDate)) noIcon=true}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="End location">
+              {{bs-datetimepicker date=trip.endtDate format='YYYY-MM-DD' placeholder="Return Date/Time" updateDate=(action (mut trip.endDate)) noIcon=true}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Departure Date/Time">
+              {{input value=trip.planedRoute class="form-control" placeholder="Planed Route"}}
             </div>
           </div>
           <div class="col-md-6">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Return Date/Time">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Planed Route">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Transportation">
+              {{input value=trip.transportation class="form-control" placeholder="Transportation"}}
             </div>
           </div>
 
           <div class="col-md-12 text-right">
             <input {{action "showStep" "2"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
-        </form>
       </div>
     </div>
+
   </div>
   <div id="tripTabContent2" role="tabpanel" class="tab-pane">
     <div class="col-md-4 col-sm-5">
@@ -113,7 +113,6 @@
     <div class="col-md-8 col-sm-7 feature-content">
       <h3>Emergency information</h3>
       <div class="checkout-content">
-        <form>
           <div class="col-md-7">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Comunication">
@@ -153,7 +152,6 @@
           <div class="col-md-12 text-right">
             <input {{action "showStep" "3"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
-        </form>
       </div>
     </div>
   </div>
@@ -170,7 +168,6 @@
           <div class="col-md-1">Hammok</div>
           <div class="col-md-1">Others</div>
         </div>
-        <form>
           <div class="row">
             <div class="col-md-2">
               <h4>Day 1/3 - Mar 05</h4>
@@ -329,7 +326,6 @@
           <div class="col-md-12 text-right">
             <input {{action "showStep" "4"}} type="submit" value="Next >>" class="btn-primary"/>
           </div>
-        </form>
       </div>
     </div>
   </div>
@@ -341,7 +337,6 @@
     </div>
     <div class="col-md-8 col-sm-7 feature-content">
       <div class="checkout-content">
-        <form>
           <div class="col-md-6">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Permits/Fees">
@@ -406,10 +401,11 @@
           <div class="col-md-12 text-right">
             <input {{action "showStep" "5"}} type="submit" value="Finish >>" class="btn-primary"/>
           </div>
-        </form>
       </div>
     </div>
   </div>
+
+
   <div id="tripTabContent5" role="tabpanel" class="tab-pane">
     <div class="col-md-4 col-sm-5">
       <div class="trip-picture">
@@ -449,4 +445,6 @@
       </div>
     </div>
   </div>
+
 </div><!-- Tab panes /- -->
+</form>

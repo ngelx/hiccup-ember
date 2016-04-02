@@ -30,6 +30,8 @@ module.exports = function(defaults) {
   app.import('vendor/magnific-popup/jquery.magnific-popup.min.js');
   app.import('vendor/magnific-popup/magnific-popup.css');
 
+  app.import('vendor/fileinput/fileinput.min.js');
+  app.import('vendor/fileinput/fileinput.min.css');
   //app.import('vendor/functions.js');
 
 
