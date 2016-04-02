@@ -5,6 +5,22 @@ export default Ember.Component.extend({
   currentStep: 1,
 
   actions: {
+    nextStep(){
+      var that = this;
+      switch(that.currentStep) {
+        case 1:
+        case 2:
+        case 3:
+          that.currentStep++;
+          that.send('showStep', that.currentStep);
+          break;
+        case 4:
+          that.currentStep++;
+          that.trip.save().then( function() {
+            that.send('showStep', that.currentStep);
+          });
+      }
+    },
     tryStep(tab){
       var that = this;
       var s = parseInt(tab);
@@ -15,16 +31,6 @@ export default Ember.Component.extend({
       else {
         // TODO Do something more interesting.
         console.log("nop, you cannot navigate to this step yet");
-      }
-    },
-    nextStep(){
-      var that = this;
-      if (that.currentStep < 5 ){
-        that.currentStep++;
-        that.send('showStep', that.currentStep);
-      }
-      else {
-        console.log("NOP! is:", that.currentStep);
       }
     },
     showStep(tab){

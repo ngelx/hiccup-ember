@@ -1,0 +1,12 @@
+<div id="latest-news" class="latest-news container-fluid">
+  <!-- Section Header -->
+  <div class="section-header">
+    <h3>Public trips from other users</h3>
+  </div><!-- Section Header /- -->
+  <!-- Row -->
+  {{#each model as |tripy|}}
+    {{trip-small-display trip=tripy}}
+  {{/each}}
+
+</div><!-- Latest News /- -->
+{{outlet}}

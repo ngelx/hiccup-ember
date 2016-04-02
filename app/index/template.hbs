@@ -1,169 +1,88 @@
-<a id="top"></a>
-<!-- Main Container -->
-<div class="main-container container-fluid no-padding">
-  <!-- Menu Block -->
-  <div class="menu-block">
-    <a href="mailto:support@domain.com"><i class="fa fa-envelope-o"></i>support@domain.com</a>
-    <nav class="navbar navbar-default ow-navigation">
-      <div class="navbar-header">
-        <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#top"><img src="images/logo.png"></a>
-      </div>
-      <div class="navbar-collapse collapse no-padding" id="navbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html"><i><img src="images/icon/home-menu.png" alt="Home menu" /></i>Home</a></li>
-          <li><a href="about.html"><i><img src="images/icon/about-menu.png" alt="About menu" /></i>About Us</a></li>
-          <li><a href=""><i><img src="images/icon/service-menu.png" alt="Services menu" /></i>Sign Up</a></li>
-          <li><a href="portfolio.html"><i><img src="images/icon/portfolio-menu.png" alt="Portfolio menu" /></i>Sign In</a></li>
-          <li><a href="contact-us.html"><i><img src="images/icon/contact-menu.png" alt="Contact menu" /></i>Contact</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </nav><!-- nav /- -->
-  </div><!-- Menu Block /- -->
 
-  <!-- Container -->
-  <div class="container">
-    <!-- Top Strip -->
-    <div class="container-fluid no-padding top-strip">
-      <div class="row">
-        <span class="menu-bar"></span>
-        <span class="menu-bar-close"></span>
-        <div class="pull-right">
-            <ul class="top-social no-bottom-margin">
-              <li>
-                <h3 class="title-li">Hiccup</h3>
-              </li>
-              <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-            </ul>
+<!-- Photo Slider -->
+<div id="slider-section" class="slider-section container-fluid no-padding">
+  <div class="row">
+
+    {{#slick-slider autoplay=true arrows=false}}
+      <div class="item">
+        <img src="images/slider/slide-1.jpg" alt="Slide">
+        <div class="carousel-caption">
+          <h3>Planificate your <b>Hiking</b> </h3>
         </div>
       </div>
-    </div><!-- Top Strip /- -->
-
-    <!-- Photo Slider -->
-    <div id="slider-section" class="slider-section container-fluid no-padding">
-      <div class="row">
-
-        {{#slick-slider autoplay=true arrows=false}}
-          <div class="item">
-            <img src="images/slider/slide-1.jpg" alt="Slide">
-            <div class="carousel-caption">
-              <h3>Planificate your <b>Hiking</b> </h3>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/slider/slide-2.jpg" alt="Slide">
-            <div class="carousel-caption">
-              <h3>Easy-to-use and <b>Free</b></h3>
-            </div>
-          </div>
-          <div class="item">
-            <img src="images/slider/slide-3.jpg" alt="Slide">
-            <div class="carousel-caption">
-              <h3>Share your <b>trip</b> with family and friends</h3>
-            </div>
-          </div>
-        {{/slick-slider}}
-
-        <!--
-        <div id="photo-slider" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-            </div>
-            <div class="item">
-            </div>
-            <div class="item">
-            </div>
-          </div>
-          <a class="left carousel-control" href="#photo-slider" role="button" data-slide="prev">
-
-          </a>
-          <a class="right carousel-control" href="#photo-slider" role="button" data-slide="next">
-
-          </a>
+      <div class="item">
+        <img src="images/slider/slide-2.jpg" alt="Slide">
+        <div class="carousel-caption">
+          <h3>Easy-to-use and <b>Free</b></h3>
         </div>
-      -->
       </div>
-    </div><!-- Photo Slider /- -->
-    <!-- Latest News -->
-    <!-- Features Section -->
-    <div id="features-section" class="features-section container-fluid no-padding">
-      <div class="section-header">
-        <h3>Create your trip</h3>
-      </div><!-- Section Header /- -->
-
-      <div class="row">
-        {{trip-editor trip=model}}
+      <div class="item">
+        <img src="images/slider/slide-3.jpg" alt="Slide">
+        <div class="carousel-caption">
+          <h3>Share your <b>trip</b> with family and friends</h3>
+        </div>
       </div>
-    </div><!-- Features Section /- -->
+    {{/slick-slider}}
 
-    <div class="seprator-border row"></div>
-
-    <div id="latest-news" class="latest-news container-fluid">
-      <!-- Section Header -->
-      <div class="section-header">
-        <h3>Public trips from other users</h3>
-      </div><!-- Section Header /- -->
-      <!-- Row -->
-      <div class="row">
-        <article class="type-post col-md-6 col-sm-6 col-xs-6">
-          <div class="entry-cover">
-            <a href="#" title="Entry Cover"><img src="images/blog/latest-1.jpg" alt="latest-1"/></a>
-            <div class="entry-meta">
-              <div class="posted-on"><span>Aug</span><i>05</i></div>
-              <div class="post-comment"><a href="#" title="comment"><i class="fa fa-commenting-o"></i></a><span>2</span></div>
-            </div>
-            <a href="#" title="Read More" class="read-more">Read More</a>
-          </div>
-          <h3 class="entry-title"><a href="#" title="Entry Title">A New Home for the Community</a></h3>
-          <div class="entry-content">
-            <p>In celebration of Envato’s 9th birthday we’re excited to announce that over the past few months we’ve been working on a top secret collaboration with Melbourne based designer NudioStudio27 to create a custom designed Envato Laptop sleeve...</p>
-          </div>
-        </article>
-        <article class="type-post col-md-6 col-sm-6 col-xs-6">
-          <div class="entry-cover">
-            <a href="#" title="Entry Cover"><img src="images/blog/latest-2.jpg" alt="latest-2"/></a>
-            <div class="entry-meta">
-              <div class="posted-on"><span>Aug</span><i>07</i></div>
-              <div class="post-comment"><a href="#" title="comment"><i class="fa fa-commenting-o"></i></a><span>10</span></div>
-            </div>
-            <a href="#" title="Read More" class="read-more">Read More</a>
-          </div>
-          <h3 class="entry-title"><a href="#" title="Entry Title">A New Home for the Community</a></h3>
-          <div class="entry-content">
-            <p>In celebration of Envato’s 9th birthday we’re excited to announce that over the past few months we’ve been working on a top secret collaboration with Melbourne based designer NudioStudio27 to create a custom designed Envato Laptop sleeve...</p>
-          </div>
-        </article>
-      </div><!-- Row /- -->
-    </div><!-- Latest News /- -->
-    <div class="seprator-border row"></div>
-
-
-    <!-- Footer -->
-    <div id="footer" class="footer-main container-fluid no-padding row">
-      <a id="back-to-top" href="#back-to-top" class="back-to-top"><i class="fa fa-arrow-circle-o-up"></i></a>
-      <!-- Bottom Footer -->
-      <div class="bottom-footer col-md-12 col-sm-12 col-xs-12 no-padding">
-        <div class="col-md-6 col-sm-6 col-xs-5">
-          <p>&copy; 2016 Hiccup</p>
+    <!--
+    <div id="photo-slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
         </div>
-        <div class="col-md-6 col-sm-6 col-xs-7">
-          <ul>
-            <li><a href="#" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" title="Dribbble"><i class="fa fa-dribbble"></i></a></li>
-            <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-          </ul>
+        <div class="item">
         </div>
-      </div><!-- Bottom Footer /- -->
-    </div><!-- Footer /- -->
-  </div><!-- Container /- -->
-</div><!-- Main Container -->
+        <div class="item">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#photo-slider" role="button" data-slide="prev">
+
+      </a>
+      <a class="right carousel-control" href="#photo-slider" role="button" data-slide="next">
+
+      </a>
+    </div>
+  -->
+  </div>
+</div><!-- Photo Slider /- -->
+<!-- Latest News -->
+<!-- Features Section -->
+<div id="features-section" class="features-section container-fluid no-padding">
+  <div class="section-header">
+    <h3>Create your trip</h3>
+  </div><!-- Section Header /- -->
+
+  <div class="row">
+    {{trip-editor trip=model}}
+  </div>
+</div><!-- Features Section /- -->
+
+<div class="seprator-border row"></div>
+
+<div id="latest-news" class="latest-news container-fluid">
+  <!-- Section Header -->
+  <div class="section-header">
+    <h3>Public trips from other users <small>{{link-to "(See All)" "trip" }}</small></h3>
+  </div><!-- Section Header /- -->
+  <!-- Row -->
+  <div class="row">
+    {{trip-small-display}}
+    <article class="type-post col-md-6 col-sm-6 col-xs-6">
+      <div class="entry-cover">
+        <a href="#" title="Entry Cover"><img src="images/blog/latest-2.jpg" alt="latest-2"/></a>
+        <div class="entry-meta">
+          <div class="posted-on"><span>Aug</span><i>07</i></div>
+          <div class="post-comment"><a href="#" title="comment"><i class="fa fa-commenting-o"></i></a><span>10</span></div>
+        </div>
+        <a href="#" title="Read More" class="read-more">Read More</a>
+      </div>
+      <h3 class="entry-title"><a href="#" title="Entry Title">A New Home for the Community</a></h3>
+      <div class="entry-content">
+        <p>In celebration of Envato’s 9th birthday we’re excited to announce that over the past few months we’ve been working on a top secret collaboration with Melbourne based designer NudioStudio27 to create a custom designed Envato Laptop sleeve...</p>
+      </div>
+    </article>
+  </div><!-- Row /- -->
+</div><!-- Latest News /- -->
+<div class="seprator-border row"></div>
+
 
 {{outlet}}

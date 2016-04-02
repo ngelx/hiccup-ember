@@ -4,7 +4,7 @@ export default DS.Model.extend({
   // Basic Attributes
   name: DS.attr('string'),
   image: DS.attr('string'),
-  organizer: DS.attr('srtring'),
+  organizer: DS.attr('string'),
   goals: DS.attr('string'),
   startLocation: DS.attr('string'),
   endLocation: DS.attr('string'),
@@ -34,5 +34,7 @@ export default DS.Model.extend({
   publicShareUrl: DS.attr('string'),
   privateShareUrl: DS.attr('string'),
   // frontend extra attributes
-  tripEditorLastStep: DS.attr('number', { defaultValue: 1 })
+  tripEditorLastStep: DS.attr('number', { defaultValue: 1 }),
+
+  intineraryDays: DS.hasMany('intineraryDay')
 });
