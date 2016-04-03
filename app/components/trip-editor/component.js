@@ -7,15 +7,19 @@ export default Ember.Component.extend({
   actions: {
     nextStep(){
       var that = this;
-      switch(that.currentStep) {
+      var step = that.currentStep;
+      that.currentStep++;
+      switch(step) {
         case 1:
+          that.send('showStep', that.currentStep);
+          break;
         case 2:
+          that.send('showStep', that.currentStep);
+          break;
         case 3:
-          that.currentStep++;
           that.send('showStep', that.currentStep);
           break;
         case 4:
-          that.currentStep++;
           that.trip.save().then( function() {
             that.send('showStep', that.currentStep);
           });
