@@ -7,9 +7,14 @@ export default Ember.Component.extend({
   actions: {
     nextStep(){
       var that = this;
-      var step = that.currentStep;
+      var prevStep = that.currentStep;
+
       that.currentStep++;
-      switch(step) {
+      if (that.currentStep > that.trip.get('tripEditorLastStep')) {
+        that.trip.set('tripEditorLastStep', that.currentStep);
+      }
+
+      switch(prevStep) {
         case 1:
           that.send('showStep', that.currentStep);
           break;
@@ -29,8 +34,8 @@ export default Ember.Component.extend({
       var that = this;
       var s = parseInt(tab);
       if (s <= that.trip.get('tripEditorLastStep')) {
-        that.currentStep = tab;
-        that.send('showStep', tab);
+        that.currentStep = s;
+        that.send('showStep', that.currentStep);
       }
       else {
         // TODO Do something more interesting.
@@ -39,13 +44,8 @@ export default Ember.Component.extend({
     },
     showStep(tab){
       var that = this;
-      var step = parseInt(tab);
       that.$('#tripTab' + tab ).toggleClass("active").siblings().removeClass("active");
       that.$('#tripTabContent' + tab).toggleClass("active").siblings().removeClass("active");
-      // TODO
-      if (step > that.trip.get('tripEditorLastStep')) {
-        that.trip.set('tripEditorLastStep', step);
-      }
     }
   },
 
