@@ -1,0 +1,11 @@
+<div class="share-div" {{action "toggleModal"}}>
+  <span><i class="fa fa-globe"></i></span>
+  <p>Public</p>
+</div>
+
+
+{{#if showModal }}
+  {{#bs-modal open=openModal title="Public trip url"}}
+     {{trip.publicShareUrl}}
+  {{/bs-modal}}
+{{/if}}
