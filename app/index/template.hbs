@@ -52,7 +52,7 @@
   </div><!-- Section Header /- -->
 
   <div class="row">
-    {{trip-editor trip=model}}
+    {{trip-editor trip=model.new_trip}}
   </div>
 </div><!-- Features Section /- -->
 
@@ -65,21 +65,11 @@
   </div><!-- Section Header /- -->
   <!-- Row -->
   <div class="row">
-    {{trip-small-display}}
-    <article class="type-post col-md-6 col-sm-6 col-xs-6">
-      <div class="entry-cover">
-        <a href="#" title="Entry Cover"><img src="images/blog/latest-2.jpg" alt="latest-2"/></a>
-        <div class="entry-meta">
-          <div class="posted-on"><span>Aug</span><i>07</i></div>
-          <div class="post-comment"><a href="#" title="comment"><i class="fa fa-commenting-o"></i></a><span>10</span></div>
-        </div>
-        <a href="#" title="Read More" class="read-more">Read More</a>
-      </div>
-      <h3 class="entry-title"><a href="#" title="Entry Title">A New Home for the Community</a></h3>
-      <div class="entry-content">
-        <p>In celebration of Envato’s 9th birthday we’re excited to announce that over the past few months we’ve been working on a top secret collaboration with Melbourne based designer NudioStudio27 to create a custom designed Envato Laptop sleeve...</p>
-      </div>
-    </article>
+    {{#each model.trips as |tripy|}}
+      {{#unless tripy.isNew }}
+        {{trip-small-display trip=tripy}}
+      {{/unless}}
+    {{/each}}
   </div><!-- Row /- -->
 </div><!-- Latest News /- -->
 <div class="seprator-border row"></div>
