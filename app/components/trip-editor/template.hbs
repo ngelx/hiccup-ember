@@ -63,12 +63,12 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                {{bs-datetimepicker date=trip.startDate required="true"}}
+                {{input value=trip.startDate class="form-control" placeholder="Start Date"}}
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group">
-                {{bs-datetimepicker date=trip.endDate}}
+                {{input value=trip.endDate class="form-control" placeholder="End Date"}}
               </div>
             </div>
           </div>
