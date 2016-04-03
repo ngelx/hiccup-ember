@@ -7,7 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('trip', function() {
-    this.route('show',{ path: '/:trip_id' });
+    this.route('show', { path: '/:trip_id' }, function() {
+      this.route('edit',{ path: '/edit' }, function() {});
+    });
+
   });
 });
 
