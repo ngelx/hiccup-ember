@@ -60,14 +60,16 @@
               {{input value=trip.organizer class="form-control" placeholder="Your Name"}}
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              {{bs-datetimepicker date=trip.startDate format='YYYY-MM-DD' placeholder="Departure Date/Time" updateDate=(action (mut trip.startDate)) noIcon=true required="true"}}
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                {{bs-datetimepicker date=trip.startDate required="true"}}
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="input-group">
-              {{bs-datetimepicker date=trip.endtDate format='YYYY-MM-DD' placeholder="Return Date/Time" updateDate=(action (mut trip.endDate)) noIcon=true required="true"}}
+            <div class="col-md-6">
+              <div class="input-group">
+                {{bs-datetimepicker date=trip.endDate}}
+              </div>
             </div>
           </div>
           <div class="col-md-6">

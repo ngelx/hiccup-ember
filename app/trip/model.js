@@ -38,11 +38,11 @@ export default DS.Model.extend({
   privateShareUrl: Ember.computed('id', function() {
     return `http://hiccup.dev/share/${this.get('id')}`;
   }),
-  /*
+
   days: Ember.computed('startDate','endDate', function(){
-    return Math.round( ( this.get('startDate') - this.get('endDate') ) / 1000 / 60 / 60 / 24 );
+    return Math.round( ( this.get('endDate') - this.get('startDate') ) / 1000 / 60 / 60 / 24 );
   }),
-  */
+
   // frontend extra attributes
   tripEditorLastStep: DS.attr('number', { defaultValue: 1 }),
 
