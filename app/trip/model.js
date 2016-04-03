@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   // Basic Attributes
@@ -31,8 +32,17 @@ export default DS.Model.extend({
   resources: DS.attr('string'),
   guides: DS.attr('string'),
   // Extra attributes
-  publicShareUrl: DS.attr('string'),
-  privateShareUrl: DS.attr('string'),
+  publicShareUrl: Ember.computed('id', function() {
+    return `http://hiccup.dev/trip/${this.get('id')}`;
+  }),
+  privateShareUrl: Ember.computed('id', function() {
+    return `http://hiccup.dev/share/${this.get('id')}`;
+  }),
+  /*
+  days: Ember.computed('startDate','endDate', function(){
+    return Math.round( ( this.get('startDate') - this.get('endDate') ) / 1000 / 60 / 60 / 24 );
+  }),
+  */
   // frontend extra attributes
   tripEditorLastStep: DS.attr('number', { defaultValue: 1 }),
 
