@@ -63,12 +63,28 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                {{input value=trip.startDate class="form-control" placeholder="Start Date"}}
+                {{ember-flatpickr
+                  altInput=true
+                  altFormat="F j, Y"
+                  dateFormat="M/D/Y"
+                  enableTime=true
+                  hourIncrement=1
+                  maxDate=(mut trip.endDate)
+                  minuteIncrement=10
+                  timeFormat="H:m"
+                  value=(mut trip.startDate)}}
               </div>
             </div>
             <div class="col-md-6">
               <div class="input-group">
-                {{input value=trip.endDate class="form-control" placeholder="End Date"}}
+                {{ember-flatpickr
+                  altInput=true
+                  altFormat="F j, Y"
+                  enableTime=true
+                  hourIncrement=1
+                  minDate=(mut trip.startDate)
+                  minuteIncrement=10
+                  value=(mut trip.endDate)}}
               </div>
             </div>
           </div>
