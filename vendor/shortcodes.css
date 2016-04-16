@@ -86,7 +86,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-image: url("../images/callout/shadow-img.png");
+	background-image: url("images/callout/shadow-img.png");
 	background-size: 100% 100%;
 	height: 17px;
 	display: inline-block;
@@ -629,7 +629,7 @@
 .features-section .nav-tabs > li > i:hover::after,
 .features-section .nav-tabs > li > i:focus::after {
 	content: "";
-	background-image: url("../images/features/active-shadow.png");
+	background-image: url("images/features/active-shadow.png");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	left: 0;
@@ -641,7 +641,7 @@
 	z-index: -1;
 }
 .features-section .tab-content {
-	background-image: url("../images/features/feature-content-bg.jpg");
+	background-image: url("images/features/feature-content-bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 65px 0 0;
@@ -890,7 +890,7 @@
 
 /* -- Testimonial Section */
 .testimonial-section {
-	background-image: url("../images/testimonial/testimonial-bg.jpg");
+	background-image: url("images/testimonial/testimonial-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 90px;
@@ -1245,7 +1245,7 @@
 
 /* -- Promo Section */
 .promo-section {
-	background-image: url("../images/about/promo-bg.jpg");
+	background-image: url("images/about/promo-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right;

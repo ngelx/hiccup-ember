@@ -35,7 +35,7 @@ body {
 	font-size: 14px;
 	color: #000;
 	overflow-x: hidden;
-	background: url("images/background/body-bg.jpg") no-repeat center center fixed;
+	background: url("images/body-bg.jpg") no-repeat center center fixed;
 	background-color: #ababab;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -683,7 +683,7 @@ ul {
 /* -- Page Header */
 .page-banner {
 	height:136px;
-	background-image: url("images/about/about-banner.jpg");
+	background-image: url("assets/images/about/about-banner.jpg");
 	background-repeat: no-repeat;
 	text-align: center;
 	color: #fff;

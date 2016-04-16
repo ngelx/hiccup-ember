@@ -1,6 +1,122 @@
-<p>
-  {{model.name}}
-</p>
+{{link-to "Back to Home" "index"}}
+
+<div class="container-fluid no-padding page-banner about-banner row">
+	<h3>GRAY COLOR CORPORATE SUITE</h3>
+	<ol class="breadcrumb no-padding no-bottom-margin">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="shop.html">shop</a></li>
+		<li class="active">gray color corporate suite</li>
+	</ol>
+</div>
+
+<div class="single-product container-fluid">
+				<!-- Product Details -->
+				<div class="product-detail container-fluid no-padding">
+					<!-- Single Product Slider -->
+					<div class="col-md-5 single-product-slider no-padding">
+						<div id="product-slider" class="flexslider">
+							<ul class="slides">
+								<li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;"><img src="assets/images/shop/single-product.jpg" alt="single-product" draggable="false"></li>
+								<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img src="assets/images/shop/single-product.jpg" alt="single-product" draggable="false"></li>
+								<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img src="assets/images/shop/single-product.jpg" alt="single-product" draggable="false"></li>
+								<li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;"><img src="assets/images/shop/single-product.jpg" alt="single-product" draggable="false"></li>
+							</ul>
+						</div>
+						<div id="product-carousel" class="flexslider product-thumb">
+
+						<div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1400%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+								<li class="flex-active-slide" style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-1.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-2.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-3.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-1.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-1.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-1.jpg" alt="thumb" draggable="false"></li>
+								<li style="width: 59px; float: left; display: block;"><img src="assets/images/shop/single-product-thumb-1.jpg" alt="thumb" draggable="false"></li>
+							</ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
+					</div><!-- Single Product Slider /- -->
+
+					<div class="col-md-7 no-padding">
+						<div class="summary entry-summary">
+							<h1>{{model.name}}<small> by xx</small></h1>
+              <div class="choose-color">
+                <p>From {{moment-format model.startDate "Do MMM YYYY"}} to {{moment-format model.endDate "Do MMM YYYY"}} ({{model.days}} Days)</p>
+                <p>Start location {{model.startLocation}}</p>
+                <p>End location {{model.endLocation}}</p>
+              </div>
+							<div class="description">
+								<p>{{model.goals}}</p>
+							</div>
+							<div class="size">
+								<span>Planed Route</span>
+								<label><small>asdadsa</small></label>
+							</div>
+						</div>
+            <div class="checkout-content">
+              <div class="row">
+                <div class="col-md-4">
+                  {{trip-share-button trip=model}}
+                </div>
+                <div class="col-md-4">
+                  {{trip-protected-share-button trip=model}}
+                </div>
+                <div class="col-md-4">
+                  <div class="share-div">
+                    <span><i class="fa fa-file-pdf-o"></i></span>
+                    <p>Download as PDF</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+					</div>
+				</div><!-- Product Details /- -->
+
+
+				<div class="woocommerce-tabs">
+					<div role="tabpanel">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a title="Description" href="#description" aria-controls="description" role="tab" data-toggle="tab">description</a></li>
+							<li role="presentation"><a title="Review" href="#information" aria-controls="review" role="tab" data-toggle="tab">other information</a></li>
+							<li role="presentation"><a title="Review" href="#review" aria-controls="review" role="tab" data-toggle="tab">reviews</a></li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane active" id="description">
+								<h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+								<p>Aliquam nec consectetur lorem. Aenean tempus velit quis dui malesuada, at commodo dolor ultricies. Fusce ac sagittis sapien. Duis posuere nisl quis ante vulputate, nec tristique nisl fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque orci tellus, convallis ac mauris a, cursus blandit turpis.</p>
+								<ul>
+									<li>Nam euismod neque orci, vitae sollicitudin diam euismod sed.</li>
+									<li>Maecenas diam quam, pharetra eu tempus et, finibus non lacus. Duis vel massa quis magna aliquet lacinia.</li>
+									<li>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem.</li>
+								</ul>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="information">
+								<h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+								<p>Aliquam nec consectetur lorem. Aenean tempus velit quis dui malesuada, at commodo dolor ultricies. Fusce ac sagittis sapien. Duis posuere nisl quis ante vulputate, nec tristique nisl fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque orci tellus, convallis ac mauris a, cursus blandit turpis.</p>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="review">
+								<h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+								<ul>
+									<li>Nam euismod neque orci, vitae sollicitudin diam euismod sed.</li>
+									<li>Maecenas diam quam, pharetra eu tempus et, finibus non lacus. Duis vel massa quis magna aliquet lacinia.</li>
+									<li>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="related-product">
+					<h2>related products</h2>
+					<h4><span>coolest collection of the season</span></h4>
+					<!-- Product -->
+				</div>
+			</div>
+
+
 
 {{link-to "Edit" "trip.show.edit" model}}
 

@@ -54,7 +54,7 @@ export default Ember.Component.extend({
       maxFileCount: 1,
       autoReplace: true,
       initialPreview: [
-        '<img src="images/features/mac-pc.png" alt="Mac" />'
+        '<img src="assets/images/features/mac-pc.png" alt="Mac" />'
       ]
     });
   }
