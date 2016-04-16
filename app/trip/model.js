@@ -31,12 +31,14 @@ export default DS.Model.extend({
   outdoorsStore: DS.attr('string'),
   resources: DS.attr('string'),
   guides: DS.attr('string'),
+  publicUuid: DS.attr('string'),
+  privateUuid: DS.attr('string'),
   // Extra attributes
   publicShareUrl: Ember.computed('id', function() {
-    return `http://hiccup.dev/trip/${this.get('id')}`;
+    return `http://hiccup.pow:4200/trip/${this.get('publicUuid')}`;
   }),
   privateShareUrl: Ember.computed('id', function() {
-    return `http://hiccup.dev/share/${this.get('id')}`;
+    return `http://hiccup.pow:4200/share/${this.get('privateUuid')}`;
   }),
 
   days: Ember.computed('startDate','endDate', function(){
