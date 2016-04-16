@@ -46,5 +46,5 @@ export default DS.Model.extend({
   // frontend extra attributes
   tripEditorLastStep: DS.attr('number', { defaultValue: 1 }),
 
-  intineraryDays: DS.hasMany('intineraryDay')
+  intinerary: DS.hasMany('intinerary')
 });
