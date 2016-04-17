@@ -296,7 +296,7 @@ ul {
 .contact-form input[type="submit"] {
 	color: #fff;
 }
-.top-social li a,
+.top-social li a.social-header,
 .call-content a,
 .service-section .tab-content .tab-pane > a,
 .entry-title a,
@@ -391,7 +391,7 @@ ul {
 	margin: 0 4px;
 	display: inline-block;
 }
-.top-social li a {
+.top-social li a.social-header {
 	width: 30px;
 	height: 30px;
 	display: inline-block;
@@ -401,7 +401,7 @@ ul {
 	text-align: center;
 	color: #646a6e;
 }
-.top-social li a:hover {
+.top-social li a.social-header:hover {
 	background-color: #7f4808;
 	color: #fff;
 	border-color: #7f4808;

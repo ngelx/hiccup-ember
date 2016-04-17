@@ -99,3 +99,26 @@
   color:black;
   width:100%;
 }
+
+h3.trip-title small {
+  color: white;
+}
+
+.product-detail .summary {
+  padding-top: 0px;
+}
+
+.product-detail .summary .description, .product-detail .summary .choose-color, .product-detail .summary .size {
+  padding-top: 0px;
+  margin-top: 10px;
+}
+
+.slick-slider {
+  margin-bottom: 0px;
+}
+
+.top-social li h3 a {
+  color: #646a6e;
+  line-height: 28px;
+  text-align: center;
+}
