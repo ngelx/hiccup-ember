@@ -683,7 +683,7 @@ ul {
 /* -- Page Header */
 .page-banner {
 	height:136px;
-	background-image: url("assets/images/about/about-banner.jpg");
+	background-image: url("images/about/about-banner.jpg");
 	background-repeat: no-repeat;
 	text-align: center;
 	color: #fff;
