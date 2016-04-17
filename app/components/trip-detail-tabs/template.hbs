@@ -1,0 +1,43 @@
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li id="tripDetailTab1" role="presentation" class="active"><a href="" role="tab" {{action "showTab" 1}}>Emergency</a></li>
+    <li id="tripDetailTab2" role="presentation" ><a href="" role="tab" {{action "showTab" 2}}>Intinerary</a></li>
+    <li id="tripDetailTab3" role="presentation" ><a href="" role="tab" {{action "showTab" 3}}>Extra Info</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="tripDetailTabContent1">
+      <h3>Emergency information</h3>
+      <p>
+        <label>Freak out time:</label> {{trip.frickOutTime}}.<br>
+        <label>Communication:</label> {{trip.communication}}.<br>
+        <label>In Reach Map:</label> {{trip.inReachMap}}.<br>
+        <label>Managing Agency:</label>  {{trip.managingAgency}}.
+      </p>
+      <p>
+        In case of any emergency, please use this information to contact.
+      </p>
+      <h4>Local contact information</h4>
+      <ul>
+        <li><label>Name: </label>{{trip.localContactName}}</li>
+        <li><label>Phone: </label>{{trip.localContactPhone}}</li>
+        <li><label>Email: </label>{{trip.localContactEmail}}</li>
+      </ul>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tripDetailTabContent2">
+      <h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+      <p>Aliquam nec consectetur lorem. Aenean tempus velit quis dui malesuada, at commodo dolor ultricies. Fusce ac sagittis sapien. Duis posuere nisl quis ante vulputate, nec tristique nisl fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque orci tellus, convallis ac mauris a, cursus blandit turpis.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="tripDetailTabContent3">
+      <h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+      <ul>
+        <li>Nam euismod neque orci, vitae sollicitudin diam euismod sed.</li>
+        <li>Maecenas diam quam, pharetra eu tempus et, finibus non lacus. Duis vel massa quis magna aliquet lacinia.</li>
+        <li>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem.</li>
+      </ul>
+    </div>
+  </div>
+</div>
