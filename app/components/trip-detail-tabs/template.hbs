@@ -26,17 +26,50 @@
       </ul>
     </div>
     <div role="tabpanel" class="tab-pane" id="tripDetailTabContent2">
-      <h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
-      <p>Aliquam nec consectetur lorem. Aenean tempus velit quis dui malesuada, at commodo dolor ultricies. Fusce ac sagittis sapien. Duis posuere nisl quis ante vulputate, nec tristique nisl fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque orci tellus, convallis ac mauris a, cursus blandit turpis.</p>
+      <h3>Intinerary details.</h3>
+      <div class="col-md-12 col-sm-12">
+        <div class="checkout-content form-table ">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">Start Location</div>
+            <div class="col-md-1">Start Time</div>
+            <div class="col-md-2">End Location</div>
+            <div class="col-md-1">End Time</div>
+            <div class="col-md-1">Water</div>
+            <div class="col-md-1">Hammok</div>
+            <div class="col-md-1">Others</div>
+          </div>
+          {{#each trip.intinerary as |intineraryDay|}}
+            <div class="row">
+              <div class="col-md-2">{{intineraryDay.day}}</div>
+              <div class="col-md-2">{{intineraryDay.startLocation}}</div>
+              <div class="col-md-1">{{moment-format intineraryDay.startTime 'HH:mm'}}</div>
+              <div class="col-md-2">{{intineraryDay.endLocation}}</div>
+              <div class="col-md-1">{{moment-format intineraryDay.endTime 'HH:mm'}}</div>
+              <div class="col-md-1">{{intineraryDay.water}}</div>
+              <div class="col-md-1">{{intineraryDay.hammok}}</div>
+              <div class="col-md-1">Others</div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="tripDetailTabContent3">
-      <h3>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem. Fusce id pellentesque met us, non suscipit quam.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget porttitor nulla. Pellentesque consequat lorem a nisl porttitor, vel finibus purus vehicula. Proin at rhoncus diam. Curabitur dictum mi at odio eleifend pharetra a in felis. Sed massa arcu, vehicula suscipit nisi et, males uada vulputate ligula. Aliquam et ex rhoncus, consectetur metus eget, pharetra nunc. </p>
+      <h3>Extra information</h3>
+      <p>Some more extra info about the trip</p>
       <ul>
-        <li>Nam euismod neque orci, vitae sollicitudin diam euismod sed.</li>
-        <li>Maecenas diam quam, pharetra eu tempus et, finibus non lacus. Duis vel massa quis magna aliquet lacinia.</li>
-        <li>Mauris lacus lectus, condimentum non consequat sit amet, sollicitudin ut lorem.</li>
+        <li><label>Permits/fee</label>{{trip.fes}}</li>
+        <li><label>Stove fuel:</label>{{trip.toveFuel}}</li>
+        <li><label>Time to trail head:</label>{{trip.timeToTrailhead}}</li>
+        <li><label>Direction Out:</label>{{trip.directionOut}}</li>
+        <li><label>Condition caution:</label>{{trip.conditionCaution}}</li>
+        <li><label>Animal caution:</label>{{trip.animalCaution}}</li>
+        <li><label>Plant caution:</label>{{trip.plantCaution}}</li>
+        <li><label>Fly issue:</label>{{trip.flyIssue}}</li>
+        <li><label>Supermarket:</label>{{trip.supermarket}}</li>
+        <li><label>Outdoor store:</label>{{trip.outdoorsStore}}</li>
+        <li><label>Resources:</label>{{trip.resources}}</li>
+        <li><label>Guides:</label>{{trip.guides}}</li>
       </ul>
     </div>
   </div>
