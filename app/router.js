@@ -12,6 +12,7 @@ Router.map(function() {
     });
 
   });
+  this.route('share', { path: '/share/:private_trip_uuid' });
 });
 
 export default Router;
