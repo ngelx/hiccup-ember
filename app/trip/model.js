@@ -48,5 +48,6 @@ export default DS.Model.extend({
   // frontend extra attributes
   tripEditorLastStep: DS.attr('number', { defaultValue: 1 }),
 
-  intinerary: DS.hasMany('intinerary')
+  intineraries: DS.hasMany('intinerary'),
+  shares: DS.hasMany('share')
 });

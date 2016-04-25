@@ -185,160 +185,59 @@
           <div class="col-md-1">Hammok</div>
           <div class="col-md-1">Others</div>
         </div>
-          <div class="row">
-            <div class="col-md-2">
-              <h4>Day 1/3 - Mar 05</h4>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <label> Previous end location??</label>
+          {{#each trip.intineraries as |intinerary|}}
+            <div class="row">
+              <div class="col-md-2">
+                <h4>Day 1/3 - Mar 05</h4>
               </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed start Time">
+              <div class="col-md-2">
+                <div class="input-group">
+                  <label> Previous end location??</label>
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Location">
+              <div class="col-md-1">
+                <div class="input-group">
+                  {{input value=intinerary.startTime class="form-control" placeholder="Planed start Time"}}
+                </div>
               </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Time">
+              <div class="col-md-2">
+                <div class="input-group">
+                  {{input value=intinerary.endLocation class="form-control" placeholder="Planed End Location"}}
+                </div>
               </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select>
-                  <option>None</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                  <option>Normal</option>
-                </select>
+              <div class="col-md-1">
+                <div class="input-group">
+                  {{input value=intinerary.endTime class="form-control" placeholder="Planed end Time"}}
+                </div>
               </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select placeholder="Hammock Trees">
-                  <option>Minimal</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                </select>
+              <div class="col-md-1">
+                <div class="input-group">
+                  <select>
+                    <option>None</option>
+                    <option>Low</option>
+                    <option>Moderate</option>
+                    <option>Normal</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="checkbox">Fishing
-                <a>Weather</a>
+              <div class="col-md-1">
+                <div class="input-group">
+                  <select placeholder="Hammock Trees">
+                    <option>Minimal</option>
+                    <option>Low</option>
+                    <option>Moderate</option>
+                  </select>
+                </div>
               </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <input type="checkbox">Fishing
+                  <a>Weather</a>
+                </div>
 
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-2">
-              <h4>Day 2/3 - Mar 06</h4>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <label> Previous end location??</label>
               </div>
             </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed start Time">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Location">
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Time">
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select>
-                  <option>None</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                  <option>Normal</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select placeholder="Hammock Trees">
-                  <option>Minimal</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="checkbox">Fishing
-                <a>Weather</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <h4>Day 3/3 - Mar 07</h4>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <label> Previous end location??</label>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed start Time">
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Location">
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Planed End Time">
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select>
-                  <option>None</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                  <option>Normal</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="input-group">
-                <select placeholder="Hammock Trees">
-                  <option>Minimal</option>
-                  <option>Low</option>
-                  <option>Moderate</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="input-group">
-                <input type="checkbox">Fishing
-                <a>Weather</a>
-              </div>
-
-            </div>
-          </div>
+          {{/each}}
 
           <div class="col-md-12 text-right">
             <input type="submit" value="Next >>" class="btn-primary"/>

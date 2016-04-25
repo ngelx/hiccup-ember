@@ -16,18 +16,18 @@ export default Ember.Component.extend({
 
       switch(prevStep) {
         case 1:
-          that.send('showStep', that.currentStep);
-          break;
         case 2:
-          that.send('showStep', that.currentStep);
+        case 4:
+          that.tripSave();
           break;
         case 3:
+          that.trip.get('intineraries').forEach(
+            function(intinerary, index, enumerable){
+              intinerary.save();
+            }
+          );
           that.send('showStep', that.currentStep);
           break;
-        case 4:
-          that.trip.save().then( function() {
-            that.send('showStep', that.currentStep);
-          });
       }
     },
     tryStep(tab){
@@ -47,6 +47,13 @@ export default Ember.Component.extend({
       that.$('#tripTab' + tab ).toggleClass("active").siblings().removeClass("active");
       that.$('#tripTabContent' + tab).toggleClass("active").siblings().removeClass("active");
     }
+  },
+
+  tripSave(){
+    var that = this;
+    that.trip.save().then( function() {
+      that.send('showStep', that.currentStep);
+    });
   },
 
   didRender() {
